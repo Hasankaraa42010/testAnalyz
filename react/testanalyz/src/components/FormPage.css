@@ -1,0 +1,200 @@
+/* Genel stil ayarları */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    text-align: center;
+    color: #333;
+  }
+  
+  h3 {
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  /* Sekme başlıkları */
+  .tab-header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .tab-header button {
+    background-color: #ddd;
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .tab-header button:hover {
+    background-color: #aaa;
+  }
+  
+  .tab-header .active-tab {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  /* Sekme içerikleri */
+  .tab-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Form elemanları */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  form label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+   
+  }
+  
+  form input,
+  form select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    
+  }
+  
+  form input.error,
+  form select.error {
+    border-color: red;
+    margin-top: 10px;
+  }
+  
+  form button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  form button:hover {
+    background-color: #45a049;
+  }
+  
+  form .error {
+    color: red;
+    font-size: 14px;
+    margin-top: -10px;
+  }
+  
+  /* Hata mesajları */
+  .error-message {
+    color: red;
+    font-size: 14px;
+  }
+  
+  /* Mobil uyumlu */
+  @media (max-width: 600px) {
+    .container {
+      padding: 10px;
+    }
+  
+    .tab-header {
+      flex-direction: column;
+    }
+  
+    .tab-header button {
+      margin: 5px 0;
+    }
+  }
+  /* form sayfası stil */
+/* Form için temel stil */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Sekmeler için stil */
+  .tab-header {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+  
+  .tab, .active-tab {
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    background-color: #f4f4f4;
+  }
+  
+  .active-tab {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .tab-content {
+    padding: 20px;
+    border-top: 1px solid #ddd;
+  }
+  
+  /* Hata mesajları ve input stil */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  input, select {
+    padding: 10px;
+    width: 100%;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .error {
+    border-color: red;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
