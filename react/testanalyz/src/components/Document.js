@@ -4,15 +4,15 @@ import React from 'react';
 const Documentation = () => {
   const tableData = [
     { name: 'Döküman İsmi', type: 'alfanumerikstring', size: '50', required: 'zorunlu', editable: 'evet' },
-    { name: 'ülke', type: 'seçilebilir', size: '-', required: '-', editable: 'evet' },
-    { name: 'şehir', type: 'seçilebilir', size: '-', required: 'ülke seçilmişşe zorulu', editable: 'evet' },
-    { name: 'tarih', type: 'date', size: '-', required: 'zorunlu', editable: '-' },
+    { name: 'ülke', type: 'seçilebilir listeden gelcek', size: '-', required: 'zorunlu değil', editable: 'evet' },
+    { name: 'şehir', type: 'seçilebilir listeden gelcek', size: '-', required: 'ülke seçilmişşe zorulu', editable: 'evet' },
+    { name: 'tarih', type: 'ön değer gelecek', size: '-', required: 'zorunlu', editable: '-' },
   ];
 
   const attachedDocuments = [
     { name: 'seri', type: 'alfanumerikstring', size: '255', required: 'zorunlu', editable: 'evet' },
     { name: 'numara', type: 'string', size: '10', required: 'zorunlu', editable: 'evet' },
-    { name: 'Alan adı', type: 'string', size: '50', required: 'zorunlu', editable: 'evet' },
+    { name: 'Tip Adı', type: 'string', size: '50', required: 'zorunlu', editable: 'evet' },
   ];
   const tableInfo = [
     { name: 'İsim', type: 'alfanumerikstring', size: '255', required: 'zorunlu', editable: 'evet' },
@@ -47,7 +47,7 @@ const Documentation = () => {
           ))}
           {/* Ekli Belgeler Kısmı */}
           <tr>
-            <td colSpan="5" style={sectionHeaderStyle}>Ekli Belgeler</td>
+            <td colSpan="5" style={sectionHeaderStyle}> Belgeler</td>
           </tr>
           {attachedDocuments.map((item, index) => (
             <tr key={`attached-${index}`}>

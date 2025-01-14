@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 
 const TestPage = () => {
-  const [inputValue, setInputValue] = useState('');
+  const [documentUrl, setDocumentUrl] = useState('');
+  const [uiUrl, setUiUrl] = useState('');
   const [responseValue, setResponseValue] = useState('');
 
   const handleSubmit = async () => {
@@ -10,11 +11,11 @@ const TestPage = () => {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ url: inputValue }),  // 'input' yerine 'url' olarak değiştirdik
+      body: JSON.stringify({ document_url: documentUrl, ui_url: uiUrl }),  // İki URL gönderiyoruz
     });
 
     const data = await response.json();
-    setResponseValue(JSON.stringify(data.table_data, null, 2));  // table_data'yı daha anlaşılır şekilde gösterelim
+    setResponseValue(JSON.stringify(data, null, 2));  // Gelen tüm veriyi gösteriyoruz
   };
 
   return (
@@ -22,12 +23,20 @@ const TestPage = () => {
       <h1>Test Page</h1>
       <input 
         type="text" 
-        value={inputValue} 
-        onChange={(e) => setInputValue(e.target.value)} 
+        placeholder="Document URL" 
+        value={documentUrl} 
+        onChange={(e) => setDocumentUrl(e.target.value)} 
+        style={inputStyle}
+      />
+      <input 
+        type="text" 
+        placeholder="UI URL" 
+        value={uiUrl} 
+        onChange={(e) => setUiUrl(e.target.value)} 
         style={inputStyle}
       />
       <button onClick={handleSubmit} style={buttonStyle}>Submit</button>
-      <pre>Response: {responseValue}</pre> {/* JSON verisini daha iyi görmek için <pre> etiketi kullanıyoruz */}
+      <pre>Response: {responseValue}</pre>
     </div>
   );
 }
